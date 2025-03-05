@@ -1,0 +1,4 @@
+{
+  "watch": ["src", "db", "app.js"],
+  "ext": "js json"
+}

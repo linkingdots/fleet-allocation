@@ -1,0 +1,38 @@
+[
+  {
+    "name": "stunning",
+    "conditions": {
+      "all": [
+        { "fact": "brand", "operator": "equal", "value": "Chevrolet" },
+        { "fact": "model", "operator": "in", "value": ["Aveo", "Optra"] },
+        { "fact": "year", "operator": "greaterThanInclusive", "value": 2018 }
+      ]
+    },
+    "event": { "type": "assignFleet", "params": { "fleet": "stunning" } },
+    "priority": 2
+  },
+  {
+    "name": "truck",
+    "conditions": {
+      "all": [
+        { "fact": "brand", "operator": "equal", "value": "Toyota" },
+        {
+          "fact": "model",
+          "operator": "in",
+          "value": ["Hilux", "Fortunner", "Prado"]
+        },
+        { "fact": "year", "operator": "greaterThanInclusive", "value": 2015 }
+      ]
+    },
+    "event": { "type": "assignFleet", "params": { "fleet": "truck" } },
+    "priority": 2
+  },
+  {
+    "name": "cheap",
+    "conditions": {
+      "all": []
+    },
+    "event": { "type": "assignFleet", "params": { "fleet": "cheap" } },
+    "priority": 1
+  }
+]
